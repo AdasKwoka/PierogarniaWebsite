@@ -3,43 +3,114 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Dancing Script', cursive;
+    list-style-type: none;
 }
-
+body{
+    min-height: 300vh;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
 /* Slider */
 
 .slider {
-    width: 100%;
-    height: 70vh;
+    height: 50vh;
     overflow: hidden;
     position: relative;
-    /* background-image: url("img/img1.jpg"); */
 
 }
 
 .slider img.imgSlider {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    opacity: 1;
-    animation: jpg 4s linear infinite;
+    animation: jpg 6s linear infinite;
 }
 
 .slider .motto {
     position: absolute;
-    top: 10%;
-    font-size: 18px;
+    top: 5%;
+    font-size: 15px;
     font-weight: bold;
     /* color: rgb(58, 149, 209); */
     text-align: center;
     width: 100%;
-    animation: text 4s linear infinite;
+    animation: text 6s linear infinite;
+}
+.wrap{
+    width: 100%;
+    position: relative;
+    
+}
+.wrap .menu{
+    height: 70vh;
+    overflow: hidden;
+    background-image: linear-gradient(transparent 60vh, black);
+}
+.wrap .menu.activeMenu{
+    height: 100%;
+    overflow: visible;
+    background-image: none;
+}
+.wrap .menu h1{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 10px;
+}
+.wrap .menu h2{
+    font-size: 24px;
+    text-align: center;
+    margin: 10px 0;
+}
+.wrap .menu h2.amount{
+    border-bottom: 1px solid #000;
+}
+.wrap .menu .food{
+    width: 95%;
+    margin: 0 auto;
+    font-size: 18px;
+}
+.wrap .menu .food li.left{
+    float: left;
+    width: 85%;
+}
+.wrap .menu .food li.right{
+    float: right;
+    width: 15%;
+    text-align: right;
+}
+.wrap .menu .food li{
+    border-bottom: 1px solid #000;
 }
 
+.wrap .menu .color{
+    color: rgb(58, 149, 209);
+}
+
+.wrap .menu .showMore{
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+    background-color: rgb(58, 149, 209);
+    padding: 5px;
+    border-style: none;
+    border-radius: 5%;
+}
+
+.wrap .menu .showMore.activeButton{
+    bottom: -5%;
+}
 @keyframes jpg {
     0% {
-        transform: scale(1);
+        
         opacity: 0;
     }
 
@@ -48,10 +119,12 @@
     }
 
     13% {
+        transform: scale(1);
         opacity: 1;
     }
 
     87% {
+        transform: scale(1.1);
         opacity: 1;
     }
 
@@ -60,7 +133,7 @@
     }
 
     100% {
-        transform: scale(1.1);
+        
         opacity: 0;
     }
 
@@ -68,7 +141,7 @@
 
 @keyframes text {
     0% {
-        transform: scale(1);
+        
         opacity: 0;
     }
 
@@ -77,10 +150,12 @@
     }
 
     13% {
+        transform: scale(1);
         opacity: 1;
     }
 
     87% {
+        transform: scale(1.2);
         opacity: 1;
     }
 
@@ -89,17 +164,60 @@
     }
 
     100% {
-        transform: scale(1.1);
+       
         opacity: 0;
     }
 }
 
-@media (orientation: landscape) {
-    .slider img.imgSlider {
-        left: 0;
-
-        background-position: center;
-        background-size: cover;
+@media (orientation: portrait) and (min-width: 411px){
+    .slider .motto {
+        font-size: 18px;
     }
-
 }
+@media (orientation: portrait) and (min-width: 768px){
+    .slider .motto {
+        font-size: 24px;
+    }
+}
+@media (orientation: portrait) and (min-width: 1024px){
+    .slider .motto {
+        font-size: 34px;
+    }
+}
+@media (orientation: landscape){
+    .slider{
+        height: 100vh;
+    }
+    .slider .motto{
+        top: 2%;
+        font-size: 18px;
+    }
+}
+@media (orientation: landscape) and (min-width: 640px){
+    .slider .motto{
+        font-size: 20px;
+    }
+}
+@media (orientation: landscape) and (min-width: 1024px){
+    .slider{
+        height: 70vh;
+    }
+    .slider .motto{
+        font-size: 34px;
+    }
+}
+@media (orientation: landscape) and (min-width: 1280px){
+    .slider{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .slider .motto{
+        font-size: 42px;
+    }
+}
+@media (orientation: landscape) and (min-width: 1600px){
+    .slider .motto{
+        font-size: 42px;
+    }
+}
+
