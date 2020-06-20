@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/png" href="img/logofav.png">
+    <link href="dist/css/lightbox.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5dc3f27341.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style/style.css">
@@ -17,6 +21,9 @@
             <h1>Pierogi naszą pasją</h1>
         </div>
     </header>
+    <div class="logo">
+        <img src="img/logo.png" alt="logo">
+    </div>
     <nav class="burger"></nav>
     <div class="wrap">
         <section class="menu">
@@ -24,68 +31,220 @@
             <h2 class="amount"><span class="color">PORCJA</span> 15 sztuk!!!</h2>
             <h2><span class="color">TRADY</span>cyjne</h2>
             <ul class="food clearfix">
-                <li class="left"><span class="color">R</span>uskie</li>
-                <li class="right ">10 zł</li>
-                <li class="left"><span class="color">Z</span> kapustą</li>
-                <li class="right">10 zł</li>
-                <li class="left"><span class="color">Z</span>e szpinakiem</li>
-                <li class="right">10 zł</li>
-                <li class="left"><span class="color">Z</span> mięsem</li>
-                <li class="right">13 zł</li>
-                <li class="left"><span class="color">M</span>ieszany mix <sub>do wyboru 3 rodzaje</sub></li>
-                <li class="right">13 zł<sub></sub></li>
+                <li class="dumplingsType left">
+                    <div class="menuImg"><a href="img/imgMenuBig1.jpg" data-lightbox="traditional" data-title="Pierogi Ruskie"><img src="img/imgMenu1.jpg"
+                            alt="Pieróg ruski"></a>
+                    </div>
+                    <span class="color">R</span>uskie<span class="price">10 zł</span>
+                </li>
+                <li class="dumplingsType right">
+                    <div class="menuImg">
+                        <a href="img/imgMenuBig1.jpg" data-lightbox="traditional" data-title="Pierogi z kapustą"><img src="img/imgMenu1.jpg" alt="Pieróg z kapustą"></a>
+                    </div>
+                    <span class="color">Z</span> kapustą<span class="price">10 zł</span>
+                </li>
+                <li class="dumplingsType left">
+                    <div class="menuImg">
+                        <a href="img/imgMenuBig1.jpg" data-lightbox="traditional" data-title="Pierogi ze szpinakiem"><img src="img/imgMenu1.jpg" alt="Pieróg ze szpinakiem"></a>
+                    </div>
+                    <span class="color">Z</span>e szpinakiem<span class="price">10 zł</span>
+                </li>
+
+                <li class="dumplingsType right">
+                    <div class="menuImg">
+                        <a href="img/imgMenuBig1.jpg" data-lightbox="traditional" data-title="Pierogi z mięsem"><img src="img/imgMenu1.jpg" alt="Pieróg z mięsem"></a>
+                    </div>
+                    <span class="color">Z</span> mięsem<span class="price">13 zł</span>
+                </li>
+
+                <li class="dumplingsType center">
+                    <div class="menuImg">
+                        <a href="img/imgMenuBig1.jpg" data-lightbox="traditional" data-title="Pierogi mix"><img src="img/imgMenu1.jpg" alt="Pieróg mix"></a>
+                    </div>
+                    <span class="color">M</span>ieszany mix
+                    <span class="price">13 zł</span><span class="sub">do wyboru 3 rodzaje</span>
+                </li>
             </ul>
 
             <h2><span class="color">ULEP</span>szone</h2>
             <ul class="food clearfix">
-                <li class="left"><span class="color">C</span>hłopskie <sub>ziemniaki, boczek, kiełbasa, cebula</sub>
+                <li class="dumplingsType left">
+                    <div class="menuImg">
+                        <a href="img/imgMenuBig1.jpg" data-lightbox="improved" data-title="Pierogi chłopskie"><img src="img/imgMenu1.jpg" alt="Pieróg chłopski"></a>
+                    </div>
+                    <span class="color">C</span>hłopskie
+                    <span class="price">13 zł</span><span class="sub">ziemniaki, boczek, kiełbasa, cebula</span>
                 </li>
-                <li class="right">13 zł<sub></sub></li>
-                <li class="left"><span class="color">Z</span> soczewicą <sub>+ suszone pomidory, pieczarki</sub></li>
-                <li class="right">12 zł<sub></sub></li>
-                <li class="left"><span class="color">Z</span> kaszą gryczaną <sub>+ pieczarki, ser feta, mięta</sub>
+
+                <li class="dumplingsType right">
+                    <div class="menuImg">
+                        <a href="img/imgMenuBig1.jpg" data-lightbox="improved" data-title="Pierogi z soczewicą"><img src="img/imgMenu1.jpg" alt="Pieróg z soczewicą"></a>
+                    </div>
+                    <span class="color">Z</span> soczewicą
+                    <span class="price">12 zł</span><span class="sub">+ suszone pomidory, pieczarki</span>
                 </li>
-                <li class="right">11 zł<sub></sub></li>
-                <li class="left"><span class="color">Z</span> kaszanką <sub>+ jabłko, cebula</sub></li>
-                <li class="right">11 zł<sub></sub></li>
-                <li class="left"><span class="color">Z</span> kapustą <sub>+ pieczarki, ser żółty</sub></li>
-                <li class="right">12 zł<sub></sub></li>
-                <li class="left"><span class="color">M</span>ieszany mix <sub>do wyboru 3 rodzaje</sub></li>
-                <li class="right">13 zł<sub></sub></li>
+
+                <li class="dumplingsType left">
+                    <div class="menuImg">
+                        <a href="img/imgMenuBig1.jpg" data-lightbox="improved" data-title="Pierogi z kaszą gryczaną"><img src="img/imgMenu1.jpg" alt="Pieróg z kaszą grzyczaną"></a>
+                    </div>
+                    <span class="color">Z</span> kaszą gryczaną
+                    <span class="price">11 zł</span><span class="sub">+ pieczarki, ser feta, mięta</span>
+                </li>
+
+                <li class="dumplingsType right">
+                    <div class="menuImg">
+                        <a href="img/imgMenuBig1.jpg" data-lightbox="improved" data-title="Pierogi z kaszanką"></a><img
+                            src="img/imgMenu1.jpg" alt="Pieróg z kaszanką"></a></div>
+                    <span class="color">Z</span> kaszanką
+                    <span class="price">11 zł</span><span class="sub">+ jabłko, cebula</span>
+                </li>
+
+                <li class="dumplingsType left">
+                    <div class="menuImg">
+                        <a href="img/imgMenuBig1.jpg" data-lightbox="improved" data-title="Pierogi z kapustą"><img src="img/imgMenu1.jpg" alt="Pieróg z kapustą"></a>
+                    </div>
+                    <span class="color">Z</span> kapustą
+                    <span class="price">12 zł</span><span class="sub">+ pieczarki, ser żółty</span>
+                </li>
+
+                <li class="dumplingsType right">
+                    <div class="menuImg">
+                        <a href="img/imgMenuBig1.jpg" data-lightbox="improved" data-title="Pierogi mix"><img src="img/imgMenu1.jpg" alt="Pieróg mix"></a>
+                    </div>
+                    <span class="color">M</span>ieszany mix
+                    <span class="price">13 zł</span><span class="sub">do wyboru 3 rodzaje</span>
+                </li>
+
             </ul>
 
             <h2><span class="color">NA</span> słodko</h2>
             <ul class="food clearfix">
-                <li class="left"><span class="color">Z</span> maliną i twarogiem</li>
-                <li class="right ">12 zł</li>
-                <li class="left"><span class="color">Z</span> borówką</li>
-                <li class="right">10 zł</li>
-                <li class="left"><span class="color">Z</span> czekoladą i bananem</li>
-                <li class="right">10 zł</li>
-                <li class="left"><span class="color">Z</span> wiśnią</li>
-                <li class="right">9 zł</li>
-                <li class="left"><span class="color">Z</span> jabłkiem</li>
-                <li class="right">7 zł</li>
-                <li class="left"><span class="color">Z</span> serem</li>
-                <li class="right">10 zł</li>
-                <li class="left"><span class="color">Z</span>e śliwką i pomarańczą</li>
-                <li class="right">11 zł</li>
-                <li class="left"><span class="color">M</span>ieszany mix <sub>do wyboru 3 rodzaje</sub></li>
-                <li class="right">12 zł<sub></sub></li>
+                <li class="dumplingsType left">
+                    <div class="menuImg">
+                        <a href="img/imgMenuBig1.jpg" data-lightbox="sweet" data-title="Pierogi z maliną i twarogiem"><img src="img/imgMenu1.jpg" alt="Pieróg z maliną i twarogiem"></a>
+                    </div>
+                    <span class="color">Z</span> maliną i twarogiem<span class="price">12 zł</span>
+                </li>
+
+                <li class="dumplingsType right">
+                    <div class="menuImg">
+                        <a href="img/imgMenuBig1.jpg" data-lightbox="sweet" data-title="Pierogi z borówkami"><img src="img/imgMenu1.jpg" alt="Pieróg z borówką"></a>
+                    </div>
+                    <span class="color">Z</span> borówką<span class="price">10 zł</span>
+                </li>
+
+                <li class="dumplingsType left">
+                    <div class="menuImg">
+                        <a href="img/imgMenuBig1.jpg" data-lightbox="sweet" data-title="Pierogi z bananem i czekoladą"><img src="img/imgMenu1.jpg" alt="Pieróg z czekoladą i bananem"></a>
+                    </div>
+                    <span class="color">Z</span> czekoladą i bananem<span class="price">10 zł</span>
+                </li>
+
+                <li class="dumplingsType right">
+                    <div class="menuImg">
+                        <a href="img/imgMenuBig1.jpg" data-lightbox="sweet" data-title="Pierogi z wiśnią"><img src="img/imgMenu1.jpg" alt="Pieróg z wiśnią"></a>
+                    </div>
+                    <span class="color">Z</span> wiśnią<span class="price">9 zł</span>
+                </li>
+
+                <li class="dumplingsType left">
+                    <div class="menuImg">
+                        <a href="img/imgMenuBig1.jpg" data-lightbox="sweet" data-title="Pierogi z jabłkiem"><img src="img/imgMenu1.jpg" alt="Pieróg z jabłkiem"></a>
+                    </div>
+                    <span class="color">Z</span> jabłkiem<span class="price">7 zł</span>
+                </li>
+
+                <li class="dumplingsType right">
+                    <div class="menuImg">
+                        <a href="img/imgMenuBig1.jpg" data-lightbox="sweet" data-title="Pierogi z serem"><img
+                            src="img/imgMenu1.jpg" alt="Pieróg z serem"></a></div>
+                    <span class="color">Z</span> serem<span class="price">10 zł</span>
+                </li>
+
+                <li class="dumplingsType left">
+                    <div class="menuImg">
+                        <a href="img/imgMenuBig1.jpg" data-lightbox="sweet" data-title="Pierogi ze śliwką i pomarańczą"><img
+                            src="img/imgMenu1.jpg" alt="Pieróg ze śliwką i pomarańczą"></a></div>
+                    <span class="color">Z</span>e śliwką i pomarańczą<span class="price">11 zł</span>
+                </li>
+
+                <li class="dumplingsType right">
+                    <div class="menuImg">
+                        <a href="img/imgMenuBig1.jpg" data-lightbox="sweet" data-title="Pierogi mix"><img
+                            src="img/imgMenu1.jpg" alt="Pieróg mix"></a></div>
+                    <span class="color">M</span>ieszany mix
+                    <span class="price">12 zł</span><span class="sub">do wyboru 3 rodzaje</span>
+                </li>
+
             </ul>
 
             <h2><span class="color">BEZ</span> tego i tamtego</h2>
             <ul class="food clearfix">
-                <li class="left"><span class="color">Z</span> mąki orkiszowej pełnoziarnistej</li>
-                <li class="right ">+3 zł</li>
-                <li class="left"><span class="color">Z</span> mąki pszennej pełnoziarnistej</li>
-                <li class="right">+3 zł</li>
+                <li class="dumplingsType left">
+                    <div class="menuImg">
+                        <a href="img/imgMenuBig1.jpg" data-lightbox="without" data-title="Pierogi z mąki orkiszowej pełnoziarnistej"><img src="img/imgMenu1.jpg" alt="Pieróg z mąki orkiszowej"></a>
+                    </div>
+                    <span class="color">Z</span> mąki orkiszowej pełnoziarnistej<span class="price">+3 zł</span>
+                </li>
+
+                <li class="dumplingsType right">
+                    <div class="menuImg">
+                        <a href="img/imgMenuBig1.jpg" data-lightbox="without" data-title="Pierogi z mąki pszennej pełnoziarnistej"><img src="img/imgMenu1.jpg" alt="Pieróg z mąki pszennej pełnoziarnistej"></a>
+                    </div>
+                    <span class="color">Z</span> mąki pszennej pełnoziarnistej<span class="price">+3 zł</span>
+                </li>
+
             </ul>
             <button class="showMore">Pokaż więcej</button>
         </section>
-        <section class="form"></section>
-        <section class="contact"></section>
+        <section class="gallery clearfix">
+            <h1 class="titleGallery">Galeria</h1>
+            <div class="galleryWrap ">
+                <span class="left arrow">&lt;</span><span class="right arrow">&gt;</span><img src="img/imgGallery1.jpg"
+                    alt="Zdjęcia pierogarni" class="imgGallery">
+            </div>
+
+            <div class="aboutUs">
+                <h1 class="titleAboutUs"><span class="color">O</span> nas</h1>
+                <span class="descriptionAboutUs"><span class="color">L</span>orem ipsum dolor, sit amet consectetur
+                adipisicing elit. Eos dolorum, reiciendis, asperiores neque magni, qui ad enim eum illo eius sunt
+                consequuntur at ea est? Rem dolorem ab illum iusto.</span>
+            </div>
+        </section>
+        <section class="open">
+            <h1 class="openHours">Godziny otwarcia</h1>
+            <div class="hours">
+                <p class="hour">Pon: 9:00 - 16:00</p>
+                <p class="hour">Wt: 9:00 - 16:00</p>
+                <p class="hour">Śr: 9:00 - 16:00</p>
+                <p class="hour">Czw: 9:00 - 16:00</p>
+                <p class="hour">Pt: 9:00 - 16:00</p>
+                <p class="hour">Sob: 9:00 - 16:00</p>
+                <p class="hour">Ndz: Nieczynne</p>
+            </div>
+        </section>
+        <section class="contact clearfix">
+            <div class="positionL">
+                <h1 class="location">Lokalizacja</h1>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2585.9151838497673!2d20.711045315700726!3d49.59934887936696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473de598917cc1a7%3A0xb3b682ded773354f!2sStrefa%20Pieroga!5e0!3m2!1spl!2spl!4v1592570954259!5m2!1spl!2spl"></iframe>
+            </div>
+
+            <div class="positionR">
+                <h1 class="socialMedia">Dane kontaktowe</h1>
+                <article class="socials">
+                    <a href="https://www.facebook.com/Strefa-Pieroga-108941700556042" class="facebook soc" target="_blank"><i class="fab fa-facebook-square"></i><span class="social">Facebook</span></a>
+                    <a href="https://www.instagram.com/strefapieroga/" class="instagram soc" target="_blank"><i class="fab fa-instagram"></i><span class="social">Instagram</span></a>
+                    <div class="telephone soc"><i class="fas fa-phone-alt"></i><span class="social">664-461-236</span>
+                    </div>
+                </article>
+            </div>
+
+        </section>
     </div>
+    <footer>Adam Kwoka &copy;</footer>
+    <script src="dist/js/lightbox-plus-jquery.min.js"></script>
     <script src="main.js"></script>
 </body>
 
