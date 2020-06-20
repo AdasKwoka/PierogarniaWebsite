@@ -24,9 +24,23 @@
     <div class="logo">
         <img src="img/logo.png" alt="logo">
     </div>
-    <nav class="burger"></nav>
+    <nav class="burger">
+        <div class="icons">
+            <i class="fas fa-hamburger burgerIcon active"></i>
+            <i class="fas fa-times disable crossIcon"></i>
+        </div>
+
+        <div class="navContent disable">
+            <a href="#menu" class="burg">Menu</a>
+            <a href="#gallery" class="burg gall">Galeria</a>
+            <a href="#about" class="burg about">O nas</a>
+            <a href="#hours" class="burg">Godziny otwarcia</a>
+            <a href="#location" class="burg">Lokalizacja</a>
+            <a href="#contact" class="burg">Kontakt</a>
+        </div>
+    </nav>
     <div class="wrap">
-        <section class="menu">
+        <section class="menu" id="menu">
             <h1>Menu</h1>
             <h2 class="amount"><span class="color">PORCJA</span> 15 sztuk!!!</h2>
             <h2><span class="color">TRADY</span>cyjne</h2>
@@ -199,20 +213,20 @@
             <button class="showMore">Pokaż więcej</button>
         </section>
         <section class="gallery clearfix">
-            <h1 class="titleGallery">Galeria</h1>
+            <h1 class="titleGallery" id="gallery">Galeria</h1>
             <div class="galleryWrap ">
                 <span class="left arrow">&lt;</span><span class="right arrow">&gt;</span><img src="img/imgGallery1.jpg"
                     alt="Zdjęcia pierogarni" class="imgGallery">
             </div>
 
-            <div class="aboutUs">
+            <div class="aboutUs" id="about">
                 <h1 class="titleAboutUs"><span class="color">O</span> nas</h1>
                 <span class="descriptionAboutUs"><span class="color">L</span>orem ipsum dolor, sit amet consectetur
                 adipisicing elit. Eos dolorum, reiciendis, asperiores neque magni, qui ad enim eum illo eius sunt
                 consequuntur at ea est? Rem dolorem ab illum iusto.</span>
             </div>
         </section>
-        <section class="open">
+        <section class="open" id="hours">
             <h1 class="openHours">Godziny otwarcia</h1>
             <div class="hours">
                 <p class="hour">Pon: 9:00 - 16:00</p>
@@ -225,13 +239,13 @@
             </div>
         </section>
         <section class="contact clearfix">
-            <div class="positionL">
+            <div class="positionL" id="location">
                 <h1 class="location">Lokalizacja</h1>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2585.9151838497673!2d20.711045315700726!3d49.59934887936696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473de598917cc1a7%3A0xb3b682ded773354f!2sStrefa%20Pieroga!5e0!3m2!1spl!2spl!4v1592570954259!5m2!1spl!2spl"></iframe>
             </div>
 
-            <div class="positionR">
+            <div class="positionR" id="contact">
                 <h1 class="socialMedia">Dane kontaktowe</h1>
                 <article class="socials">
                     <a href="https://www.facebook.com/Strefa-Pieroga-108941700556042" class="facebook soc" target="_blank"><i class="fab fa-facebook-square"></i><span class="social">Facebook</span></a>

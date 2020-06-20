@@ -7,6 +7,10 @@ const arrowLeft = document.querySelector('.arrow.left');
 const arrowRight = document.querySelector('.arrow.right');
 const leftGalleryPanel = document.querySelector('.galleryWrap');
 const rightGalleryPanel = document.querySelector('.aboutUs');
+const menuBurg = document.querySelector('.burgerIcon');
+const menuCross = document.querySelector('.crossIcon');
+const nav = document.querySelector('.navContent');
+const icons = document.querySelector('.icons');
 
 let activeElement = 0;
 const timeChange = 6000;
@@ -90,3 +94,15 @@ const showGalleryPanels = () => {
     }
 }
 $(document).on('scroll', showGalleryPanels);
+
+function switchNav() {
+    menuBurg.classList.toggle('active');
+    menuBurg.classList.toggle('disable');
+    menuCross.classList.toggle('active');
+    menuCross.classList.toggle('disable');
+    nav.classList.toggle('active');
+    nav.classList.toggle('disable');
+}
+
+icons.addEventListener('click', switchNav);
+
